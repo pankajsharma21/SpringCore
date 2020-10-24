@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/Schema/context"
+    xmlns:p="http://www.springframework.org/Schema/p"
+    xmlns:util="http://www.springframework.org/schema/util"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+          http://www.springframework.org/schema/util
+    http://www.springframework.org/schema/util/spring-util.xsd
+        ">
+        <!-- Standalone list -->         <!--we can specified implemented collection class here  -->
+        <util:list  list-class="java.util.Linkedlist" id="mybestfriends">
+        <value>Aman</value>
+        <value>rOHIT</value>
+        <value>ANKIT</value>
+        <value>Ashu</value>
+        </util:list>
+        <!-- Standalone Map -->
+        <util:map map-class="java.util.HashMap" id="fees">
+        <entry key="spring"  value="8000" />
+         <entry key="hibernate"  value="2000" />
+         <entry key="django"  value="5000" />
+        </util:map>
+        <!-- Standalone Properties -->
+        <util:properties id="dbconfig">
+        <prop key="driver">com.sql.jdbc.drive</prop>
+          <prop key="username">pankaj</prop>
+          <prop key="password">root</prop>
+            <prop key="url">mysql:jdbc://localhost:3306/database</prop>
+        </util:properties>
+        
+        <bean  class="com.springcore.standalone.collections.Person" name="person1"  >
+        <!-- <property name="friends"><ref bean="mybestfriends" /></property> -->
+         <property name="friends" ref="mybestfriends" />
+          <property name="feesStructure" ref="fees" />
+           <property name="properties" ref="dbconfig" />
+        </bean>
+        
+        <bean  class="com.springcore.standalone.collections.Person" name="person2"  >
+        <!-- <property name="friends"><ref bean="mybestfriends" /></property> -->
+         <property name="friends" ref="mybestfriends" />
+          <property name="feesStructure" ref="fees" />
+        </bean>
+    
+</beans>
+
+

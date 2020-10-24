@@ -1,0 +1,10 @@
+@Component("st")   this use insted of bean and ("st") is object name we want to gave 
+if we not gave any name by default class name in camle case is name of
+object like Student is name of class and student is name of object
+like StudentName is name of class and studentName is name of object
+
+@Value("Pankaj") is use to gave value to variables
+
+ <context:component-scan base-package="com.springcore.stereotype"/>
+ this line use in xml file to make scan all package and sub package to create bean
+ of class we want 

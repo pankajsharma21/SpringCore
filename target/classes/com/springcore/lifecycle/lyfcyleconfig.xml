@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:p="http://www.springframework.org/Schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+      <!--to enable annotation  -->           
+     <context:annotation-config /> 
+ 
+       <!--  if we change name of init & destroy method name we also change in this file below to make change work  -->
+       <!--  
+       <bean class="com.springcore.lifecycle.Samosa" name="s1" init-method="init" destroy-method="destroy">
+           <property name="price" value="10" />   
+    </bean>
+    <bean class="com.springcore.lifecycle.jelbi" name="j1">
+           <property name="price" value="50" />   
+    </bean>
+      -->
+     <!--  <bean name="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/> to active annotation -->
+    <bean class="com.springcore.lifecycle.Pepsi"  name="ps1">
+           <property name="brand" value="7up" />   
+    </bean>
+</beans>
